@@ -381,22 +381,7 @@
 			</build>
 		</profile>
 	</profiles>
-	<distributionManagement>
-		<site>
-			<id>static.springframework.org</id>
-			<url>scp://static.springframework.org/var/www/domains/springframework.org/static/htdocs/spring-batch/trunk</url>
-		</site>
-		<repository>
-			<id>spring-release</id>
-			<name>Spring Release Repository</name>
-			<url>s3://maven.springframework.org/release</url>
-		</repository>
-		<snapshotRepository>
-			<id>spring-snapshot</id>
-			<name>Spring Snapshot Repository</name>
-			<url>s3://maven.springframework.org/snapshot</url>
-		</snapshotRepository>
-	</distributionManagement>
+	
 	<build>
 		<extensions>
 			<extension>
