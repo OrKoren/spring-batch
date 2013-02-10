@@ -576,11 +576,7 @@
 			</snapshots>
 		</pluginRepository>
 	</pluginRepositories>
-	</distributionManagement>
-		</profile>
-		<profile>
-			<id>central</id>
-					<distributionManagement>
+		<distributionManagement>
     <repository>
         <id>repo.jfrog.org</id>
         <name>repo.jfrog.org-releases</name>
