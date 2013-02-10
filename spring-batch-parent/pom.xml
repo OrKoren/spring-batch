@@ -699,19 +699,15 @@
 		</dependencies>
 	</dependencyManagement>
 	<distributionManagement>
-		<site>
-			<id>static.springframework.org</id>
-			<url>scp://static.springframework.org/var/www/domains/springframework.org/static/htdocs/spring-batch/trunk</url>
-		</site>
-		<repository>
-			<id>spring-release</id>
-			<name>Spring Release Repository</name>
-			<url>s3://maven.springframework.org/release</url>
-		</repository>
-		<snapshotRepository>
-			<id>spring-snapshot</id>
-			<name>Spring Snapshot Repository</name>
-			<url>s3://maven.springframework.org/snapshot</url>
-		</snapshotRepository>
-	</distributionManagement>
+    <repository>
+        <id>repo.jfrog.org</id>
+        <name>repo.jfrog.org-releases</name>
+        <url>http://amphibian.jfrog.org/artifactory/libs-snapshots-local</url>
+    </repository>
+    <snapshotRepository>
+        <id>repo.jfrog.org</id>
+        <name>repo.jfrog.org-snapshots</name>
+        <url>http://amphibian.jfrog.org/artifactory/libs-snapshots-local</url>
+    </snapshotRepository>
+</distributionManagement>
 </project>
