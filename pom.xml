@@ -356,70 +356,7 @@
 				<module>archetypes</module>
 			</modules>
 		</profile>
-		<profile>
-			<id>milestone</id>
-					<distributionManagement>
-    <repository>
-        <id>repo.jfrog.org</id>
-        <name>repo.jfrog.org-releases</name>
-        <url>http://amphibian.jfrog.org/artifactory/libs-snapshots-local</url>
-    </repository>
-    <snapshotRepository>
-        <id>repo.jfrog.org</id>
-        <name>repo.jfrog.org-snapshots</name>
-        <url>http://amphibian.jfrog.org/artifactory/libs-snapshots-local</url>
-    </snapshotRepository>
-</distributionManagement>
-		</profile>
-		<profile>
-			<id>central</id>
-					<distributionManagement>
-    <repository>
-        <id>repo.jfrog.org</id>
-        <name>repo.jfrog.org-releases</name>
-        <url>http://amphibian.jfrog.org/artifactory/libs-snapshots-local</url>
-    </repository>
-    <snapshotRepository>
-        <id>repo.jfrog.org</id>
-        <name>repo.jfrog.org-snapshots</name>
-        <url>http://amphibian.jfrog.org/artifactory/libs-snapshots-local</url>
-    </snapshotRepository>
-</distributionManagement>
-		</profile>
-		<profile>
-			<id>staging</id>
-			<properties>
-			  <dist.staging>/${user.dir}/target/staging/dist</dist.staging>
-			</properties>
-			<distributionManagement>
-				<site>
-					<id>staging</id>
-					<url>file:///${user.dir}/target/staging</url>
-				</site>
-				<repository>
-					<id>staging</id>
-					<url>file:///${user.dir}/target/staging</url>
-				</repository>
-				<snapshotRepository>
-					<id>staging</id>
-					<url>file:///${user.dir}/target/staging</url>
-				</snapshotRepository>
-			</distributionManagement>
-			<build>
-			  <plugins>
-				<plugin>
-				  <groupId>org.apache.maven.plugins</groupId>
-				  <artifactId>maven-deploy-plugin</artifactId>
-				  <configuration>
-					<skip>false</skip>
-				  </configuration>
-				</plugin>
-			  </plugins>
-			  <!-- the name of this project is 'spring-amqp-dist';
-				   make sure the zip file is just 'spring-amqp'. -->
-			  <finalName>${dist.finalName}</finalName>
-			</build>
-		</profile>
+		
 		<profile>
 			<id>manifest</id>
 			<activation>
@@ -654,5 +591,20 @@
 			</snapshots>
 		</pluginRepository>
 	</pluginRepositories>
-	
+	</distributionManagement>
+		</profile>
+		<profile>
+			<id>central</id>
+					<distributionManagement>
+    <repository>
+        <id>repo.jfrog.org</id>
+        <name>repo.jfrog.org-releases</name>
+        <url>http://amphibian.jfrog.org/artifactory/libs-snapshots-local</url>
+    </repository>
+    <snapshotRepository>
+        <id>repo.jfrog.org</id>
+        <name>repo.jfrog.org-snapshots</name>
+        <url>http://amphibian.jfrog.org/artifactory/libs-snapshots-local</url>
+    </snapshotRepository>
+</distributionManagement>
 </project>
