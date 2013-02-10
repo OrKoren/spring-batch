@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<settings xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.1.0 http://maven.apache.org/xsd/settings-1.1.0.xsd" xmlns="http://maven.apache.org/SETTINGS/1.1.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <servers>
+    <server>
+      <username>jenkins</username>
+      <password>password</password>
+      <id>central</id>
+    </server>
+    <server>
+      <username>jenkins</username>
+      <password>password</password>
+      <id>snapshots</id>
+    </server>
+<server>
+      <username>jenkins</username>
+      <password>password</password>
+      <id>repo.jfrog.org</id>
+    </server>
+  </servers>
+  <profiles>
+    <profile>
+      <repositories>
+        <repository>
+          <snapshots>
+            <enabled>false</enabled>
+          </snapshots>
+          <id>central</id>
+          <name>jfrog-dependencies</name>
+          <url>http://amphibian.jfrog.org/artifactory/jfrog-dependencies</url>
+        </repository>
+        <repository>
+          <snapshots />
+          <id>snapshots</id>
+          <name>libs-snapshots</name>
+          <url>http://amphibian.jfrog.org/artifactory/libs-snapshots</url>
+        </repository>
+      </repositories>
+      <pluginRepositories>
+        <pluginRepository>
+          <snapshots>
+            <enabled>false</enabled>
+          </snapshots>
+          <id>central</id>
+          <name>jfrog-dependencies</name>
+          <url>http://amphibian.jfrog.org/artifactory/jfrog-dependencies</url>
+        </pluginRepository>
+        <pluginRepository>
+          <snapshots />
+          <id>snapshots</id>
+          <name>libs-snapshots</name>
+          <url>http://amphibian.jfrog.org/artifactory/libs-snapshots</url>
+        </pluginRepository>
+      </pluginRepositories>
+      <id>artifactory</id>
+    </profile>
+  </profiles>
+  <activeProfiles>
+    <activeProfile></activeProfile>
+  </activeProfiles>
+</settings>
