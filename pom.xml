@@ -649,7 +649,7 @@
 			</snapshots>
 		</pluginRepository>
 	</pluginRepositories>
-		<distributionManagement>
+			<distributionManagement>
     <repository>
         <id>repo.jfrog.org</id>
         <name>repo.jfrog.org-releases</name>
