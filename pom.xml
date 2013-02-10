@@ -358,13 +358,18 @@
 		</profile>
 		<profile>
 			<id>milestone</id>
-			<distributionManagement>
-				<repository>
-					<id>spring-milestone</id>
-					<name>Spring Milestone Repository</name>
-					<url>s3://maven.springframework.org/milestone</url>
-				</repository>
-			</distributionManagement>
+					<distributionManagement>
+    <repository>
+        <id>repo.jfrog.org</id>
+        <name>repo.jfrog.org-releases</name>
+        <url>http://amphibian.jfrog.org/artifactory/libs-snapshots-local</url>
+    </repository>
+    <snapshotRepository>
+        <id>repo.jfrog.org</id>
+        <name>repo.jfrog.org-snapshots</name>
+        <url>http://amphibian.jfrog.org/artifactory/libs-snapshots-local</url>
+    </snapshotRepository>
+</distributionManagement>
 		</profile>
 		<profile>
 			<id>central</id>
