@@ -368,18 +368,18 @@
 		</profile>
 		<profile>
 			<id>central</id>
-			<distributionManagement>
-			  <snapshotRepository>
-				<id>sonatype-nexus-snapshots</id>
-				<name>Sonatype Nexus Snapshots</name>
-				<url>https://oss.sonatype.org/content/repositories/snapshots/</url>
-			  </snapshotRepository>
-			  <repository>
-				<id>sonatype-nexus-staging</id>
-				<name>Nexus Release Repository</name>
-				<url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
-			  </repository>
-			</distributionManagement>
+					<distributionManagement>
+    <repository>
+        <id>repo.jfrog.org</id>
+        <name>repo.jfrog.org-releases</name>
+        <url>http://amphibian.jfrog.org/artifactory/libs-snapshots-local</url>
+    </repository>
+    <snapshotRepository>
+        <id>repo.jfrog.org</id>
+        <name>repo.jfrog.org-snapshots</name>
+        <url>http://amphibian.jfrog.org/artifactory/libs-snapshots-local</url>
+    </snapshotRepository>
+</distributionManagement>
 		</profile>
 		<profile>
 			<id>staging</id>
@@ -649,16 +649,5 @@
 			</snapshots>
 		</pluginRepository>
 	</pluginRepositories>
-			<distributionManagement>
-    <repository>
-        <id>repo.jfrog.org</id>
-        <name>repo.jfrog.org-releases</name>
-        <url>http://amphibian.jfrog.org/artifactory/libs-snapshots-local</url>
-    </repository>
-    <snapshotRepository>
-        <id>repo.jfrog.org</id>
-        <name>repo.jfrog.org-snapshots</name>
-        <url>http://amphibian.jfrog.org/artifactory/libs-snapshots-local</url>
-    </snapshotRepository>
-</distributionManagement>
+	
 </project>
