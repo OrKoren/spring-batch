@@ -580,12 +580,12 @@
     <repository>
         <id>repo.jfrog.org</id>
         <name>repo.jfrog.org-releases</name>
-        <url>http://amphibian.jfrog.org/artifactory/libs-snapshots-local</url>
+        <url>http://jfapp2.jfrog.org:8081/artifactory/libs-snapshots-local</url>
     </repository>
     <snapshotRepository>
         <id>repo.jfrog.org</id>
         <name>repo.jfrog.org-snapshots</name>
-        <url>http://amphibian.jfrog.org/artifactory/libs-snapshots-local</url>
+        <url>http://jfapp2.jfrog.org:8081/artifactory/libs-snapshots-local</url>
     </snapshotRepository>
 </distributionManagement>
 </project>
