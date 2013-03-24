@@ -91,6 +91,6 @@
     </profile>
   </profiles>
   <activeProfiles>
-    <activeProfile>jfapp2</activeProfile>
+    <activeProfile>artifactory</activeProfile>
   </activeProfiles>
 </settings>
