@@ -27,13 +27,13 @@
           </snapshots>
           <id>central</id>
           <name>jfrog-dependencies</name>
-          <url>http://amphibian.jfrog.org/artifactory/jfrog-dependencies</url>
+          <url>http://10.0.0.163:9080/artifactory/libs-release</url>
         </repository>
         <repository>
           <snapshots />
           <id>snapshots</id>
           <name>libs-snapshots</name>
-          <url>http://amphibian.jfrog.org/artifactory/libs-snapshots</url>
+          <url>http://10.0.0.163:9080/artifactory/libs-snapshot</url>
         </repository>
       </repositories>
       <pluginRepositories>
@@ -43,13 +43,13 @@
           </snapshots>
           <id>central</id>
           <name>jfrog-dependencies</name>
-          <url>http://amphibian.jfrog.org/artifactory/jfrog-dependencies</url>
+          <url>http://10.0.0.163:9080/artifactory/libs-release</url>
         </pluginRepository>
         <pluginRepository>
           <snapshots />
           <id>snapshots</id>
           <name>libs-snapshots</name>
-          <url>http://amphibian.jfrog.org/artifactory/libs-snapshots</url>
+          <url>http://10.0.0.163:9080/artifactory/libs-snapshot</url>
         </pluginRepository>
       </pluginRepositories>
       <id>artifactory</id>
