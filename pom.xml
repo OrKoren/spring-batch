@@ -209,6 +209,97 @@
 							</entities>
 						</configuration>
 					</plugin>
+					
+					
+					<plugin>
+			 <groupId>org.jfrog.buildinfo</groupId>
+            		<artifactId>build-info-extractor-maven3-plugin</artifactId>
+            		<version>2.2.x-SNAPSHOT</version>
+           		 <inherited>false</inherited>
+           		 <executions>
+               			 <execution>
+                   			 <id>build-info</id>
+                   			 <goals>
+                       			 <goal>extract-build-info</goal>
+                   			 </goals>
+             	<configuration>
+              <writeProperties>true</writeProperties>
+              <artifactory>
+                           <activateRecorder>true</activateRecorder>
+                           <buildListernerAdded>yes</buildListernerAdded>
+                           <includeEnvVars>true</includeEnvVars>
+                           <envVarsExcludePatterns>*DISPLAY*</envVarsExcludePatterns>
+                           <exportFile>/home/ork/file</exportFile>
+                           <timeout>1000</timeout>
+              </artifactory>
+              <propertiesFile>/home/ork/baruch/project-examples/maven-example/buildInfo.properties</propertiesFile>
+              <pomPropertiesPriority>true</pomPropertiesPriority>
+                       <deployProperties>
+                                artifactory.deploy.or = or2
+                                artifactory.deploy.or2 = or3
+                       </deployProperties>  
+                       <resolver>
+                                 <contextUrl>http://10.0.0.143/artifactory/remote-repos</contextUrl>
+                                 <maven>true</maven>
+                                 <name>demo</name>
+                                 <password>admin</password>
+                                 <repoKey>password</repoKey>
+                       </resolver>
+                       
+                        <publisher>
+                                   <name>OrKoren</name>
+                                   <artifactSpecs>ArSpec</artifactSpecs>
+                                  <contextUrl>http://10.0.0.143:8081/artifactory/</contextUrl>
+                                  <evenUnstable>true</evenUnstable>
+                                  <publishArtifacts>true</publishArtifacts>
+                                  <publishBuildInfo>true</publishBuildInfo>
+                                  <repoKey>libs-releases-local</repoKey>
+                                  <snapshotRepoKey>ext-snapshot-local</snapshotRepoKey>
+                                  <username>admin</username>
+                                  <password>password</password>
+                                  <url>http://orkoren.or.com</url>
+                                  <m2Compatible>false</m2Compatible>
+                                  <maven>false</maven>
+                                  <url>http://www.www.co.il</url>
+                       </publisher>
+                      
+                       <buildInfo>
+                                  <agentName>orAgent</agentName>
+                                  <agentVersion>orVersion</agentVersion>
+                                  <buildAgentName>orBuildAgentName</buildAgentName>
+                                  <buildAgentVersion>orBuildAgentNameVersion</buildAgentVersion>
+                                  <buildName>OrBuildName</buildName>
+                                  <buildNumber>19</buildNumber>
+                                  <buildNumbersNotToDelete>20</buildNumbersNotToDelete>
+                                  <buildTimestamp>20110907</buildTimestamp>
+                                  <buildUrl>http://www.walla.co.il</buildUrl>
+                                  <buildRetentionDays>2</buildRetentionDays>
+                                  <buildRoot>OrBuildName</buildRoot>
+                                                                                                           
+                                  <deleteBuildArtifacts>true</deleteBuildArtifacts>
+                                  <vcsRevision>VcsVersiob</vcsRevision>
+                                  <buildTimestamp>1339966800000</buildTimestamp>
+                                  <principal>OrKoren</principal>
+                                  <vcsRevision>8</vcsRevision>
+                                  <parentBuildName>OrBuildName</parentBuildName>
+                                  <parentBuildNumber>19</parentBuildNumber>
+                       </buildInfo>
+                       <licenses>
+                                 <autoDiscover>true</autoDiscover>
+                                 <includePublishedArtifacts>false</includePublishedArtifacts>
+                                 <runChecks>true</runChecks>
+                                 <violationRecipients>ork@jfrog.com</violationRecipients>
+                                 <scopes>compile</scopes>
+                       </licenses>
+              </configuration>
+                </execution>
+            </executions>
+
+		</plugin>
+					
+					
+					
+					
 					<plugin>
 						<groupId>org.apache.maven.plugins</groupId>
 						<artifactId>maven-antrun-plugin</artifactId>
